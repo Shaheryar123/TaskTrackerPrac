@@ -1,9 +1,11 @@
 import './App.css'
-const Header = () => {
+import Button from "./Button";
+const Header = ({toggleTask}) => {
     return (
         <header className = 'App-header'>
             <h1>
-            TASK TRACKER APP</h1>
+                TASK TRACKER APP</h1>
+            <Button toggleTask={ toggleTask}/>
             
         </header>
     )

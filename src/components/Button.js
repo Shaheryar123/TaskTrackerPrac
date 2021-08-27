@@ -1,8 +1,14 @@
 import './App.css'
-const Button = () => {
+import {useState} from 'react'
+
+const Button = ({setToggleTask}) =>
+{
+    
     return (
         <div className ='App-header'>
-        <button className = 'App-button' onClick ={console.log('Clicked')}>ADD TASK</button>
+            <button className='App-button'
+            //    onClick={setToggleTask(false)}
+            >ADD TASK</button>
         </div>
     )
 }
