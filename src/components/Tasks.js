@@ -5,12 +5,13 @@ const Tasks = ({tasks, deleteTask ,reminderChange}) => {
             {
             tasks.map((task)=>
             (
-                <div className = 'App-task' key = {task.id} onDoubleClick={reminderChange}>
+                <div className = {`${task.reminder?'App-task' :''}`} key = {task.id} onDoubleClick={()=>reminderChange(task.id)}>
                     <h3 >{task.des}</h3>                    
                     <p>{task.time}</p>
                    <div style = {{display:'flex', alignItems: 'center'}}>
                     <p>Remove Task:</p>
                     <input  type ='checkBox' style ={{cursor : 'pointer' }} onChange= {()=>deleteTask(task.id)} />
+                   
                     </div>
                     </div>
                     )) 
